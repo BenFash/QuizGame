@@ -47,10 +47,16 @@ body {
     cursor: pointer;
 }
 
-.btn:hover {
+/**not:disabled = hover effect will not work when disabled (when you have selceted an answer)**/
+.btn:hover:not([disabled]) {
     background: #0e0e0d61;
     color: #fff;
 }
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
 
 #next-btn {
     background: #9DA39A;
@@ -63,4 +69,12 @@ body {
     cursor: pointer;
     border-radius: 5px;
     display: none;
+}
+
+.correct {
+    background: #9aeabc;
+}
+
+.incorrect {
+    background: #ff9393;
 }
